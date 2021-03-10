@@ -1,5 +1,15 @@
+h1 {
+    color: blue;
+    font-size: 40pt
+}
+
+h2 {
+    font-size: 25pt;
+    color:red
+}
+
 body {
-    background-color: red;
+    background-color:whitesmoke
 }
 
 .drink-img {
