@@ -1,17 +1,55 @@
 h1 {
     color: blue;
-    font-size: 40pt
+    font-size: 40pt;
+    text-align: center;
 }
 
 h2 {
     font-size: 25pt;
-    color:red
+    color:red;
+    text-align: center;
 }
 
 body {
     background-color:whitesmoke
 }
 
+/* .drink-img {
+    width:200px;
+    margin:auto;
+    display: block;
+    text-align: center;
+} */
+
+/* .card {
+    text-align: center;
+    flex:auto;
+    float: left;
+    width: 20%;
+    padding:50px
+}
+
+.drinx {
+    display:inline-block;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.drinx{
+    border: 1px;
+    text-align: center;
+}
+
+.card {
+    padding: 50px;
+    display:inline-block
+}
+
 .drink-img {
-    width: 250px
+    width:200px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
