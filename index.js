@@ -1,8 +1,11 @@
 let cardInfo = document.createElement("div")
 cardInfo.className = "card-info"
 cardInfo.id = 'info'
+let container = document.querySelector(".drinx")
 let form = document.querySelector("form")
 form.addEventListener("submit", (e) => searchDrinx(e))
+
+getdrinks()
 
 function searchDrinx(e) {
 	e.preventDefault()
@@ -18,9 +21,6 @@ function getdrinks(e = "vodka") {
 		margaritas.drinks.forEach(drink => buildDrinks(drink))})
 	.catch(error => console.error("error", error));
 }
-getdrinks()
-
-let container = document.querySelector(".drinx")
 
 function buildDrinks(drinks) {
 	let card = document.createElement("div")
@@ -39,7 +39,6 @@ function buildDrinks(drinks) {
 	drinkImg.addEventListener("click", () => showCardInfo(drinks))
 	
 	drinkName.append(btn)
-
 	card.append(drinkImg, drinkName)
 	container.appendChild(card)
 }
@@ -49,57 +48,56 @@ const showCardInfo = function(drinks) {
 	cardInfo.style.display = "block"
 
   const glass = document.createElement("h5")
-  glass.className = "infoName"
   const directions = document.createElement("h6")
-  directions.className = "infoName"
   const ing1 = document.createElement("ul")
-  ing1.className = "infoName"
   const ing2 = document.createElement("ul")
-  ing2.className = "infoName"
   const ing3 = document.createElement("ul")
-  ing3.className = "infoName"
   const ing4 = document.createElement("ul")
-  ing4.className = "infoName"
   const ing5 = document.createElement("ul")
-  ing5.className = "infoName"
   const ing6 = document.createElement("ul")
-  ing6.className = "infoName"
   const ing7 = document.createElement("ul")
-  ing7.className = "infoName"
   const exit = document.createElement("button")
-  exit.className = "exitBtn"
   const drinkNameInfo = document.createElement("h4")
+
+  exit.textContent = " X"
+  exit.className = "exitBtn"
   drinkNameInfo.textContent = drinks.strDrink
   drinkNameInfo.className = "infoNameTitle"
-
-  	exit.textContent = " X"
 	glass.textContent = `Glassware in image: ${drinks.strGlass}`
-	directions.textContent = `Instructions: ${drinks.strInstructions}"`
-	
+  glass.className = "infoName"
+  directions.className = "infoName"
+	directions.textContent = `Instructions: ${drinks.strInstructions}`
   ing1.textContent = setTextContent(drinks.strIngredient1, drinks.strMeasure1)
+  ing1.className = "infoName"
   ing2.textContent = setTextContent(drinks.strIngredient2, drinks.strMeasure2)
+  ing2.className = "infoName"
   ing3.textContent = setTextContent(drinks.strIngredient3, drinks.strMeasure3)
+  ing3.className = "infoName"
   ing4.textContent = setTextContent(drinks.strIngredient4, drinks.strMeasure4)
+  ing4.className = "infoName"
   ing5.textContent = setTextContent(drinks.strIngredient5, drinks.strMeasure5)
+  ing5.className = "infoName"
   ing6.textContent = setTextContent(drinks.strIngredient6, drinks.strMeasure6)
+  ing6.className = "infoName"
   ing7.textContent = setTextContent(drinks.strIngredient7, drinks.strMeasure7)
+  ing7.className = "infoName"
 	
 	cardInfo.append(exit, drinkNameInfo, glass, directions, ing1, ing2, ing3, ing4, ing5, ing6, ing7)
 	container.appendChild(cardInfo)
 
 	exit.addEventListener("click", () => removeInfo(cardInfo))
-	}
+}
   
-  function setTextContent(ingredients, measurements) {
-    if (ingredients === null) {
-      return ""
-    } else if (ingredients !== null & measurements == null){
-      return `${ingredients} - to taste`
-    } else {return `${ingredients} - ${measurements}`}
-  }
+function setTextContent(ingredients, measurements) {
+  if (ingredients === null) {
+    return ""
+  } else if (ingredients !== null & measurements == null){
+    return `${ingredients} - to taste`
+  } else {return `${ingredients} - ${measurements}`}
+}
 
 function changeBtnColor(btn) {
-	btn.textContent = " ♥"
+	btn.textContent = " ♥" 
 }	
 
 function removeInfo(cardInfo) {
