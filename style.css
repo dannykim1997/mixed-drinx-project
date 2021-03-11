@@ -1,48 +1,65 @@
 h1 {
-    color: blue;
-    font-size: 40pt;
+    color: #EFEFEF;
+    font-size: 35pt;
     text-align: center;
+    border:0;
+    margin: 0;
+    padding: 0;
+    outline:0;
+    background-color: #302A32;
+    font-family: inherit;
 }
 
-h2 {
-    font-size: 25pt;
-    color:red;
+.name {
+    font-size: 30pt;
+    color:black;
+    text-align: center; 
+    max-width: 100px;
+    margin: auto;
+    margin-top:revert;
+    background-color: #EFEFEF;
+    border-color: #302A32;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.infoName {
+    background-color: white;
+    color:#302A32;
+    font-size: 12pt;
+    font-family: inherit;
+    margin-left:10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.infoNameTitle {
+    background-color: white;
+    color:#302A32;
+    font-size: 15pt;
+    margin-left:10px;
+    margin-top: 10px;
+    margin-right: 10px;
     text-align: center;
+    font-style: normal;
 }
 
 body {
-    background-color:whitesmoke
+    background-color:antiquewhite;
+    margin:0;
+    padding:0
 }
-
-/* .drink-img {
-    width:200px;
-    margin:auto;
-    display: block;
-    text-align: center;
-} */
-
-/* .card {
-    text-align: center;
-    flex:auto;
-    float: left;
-    width: 20%;
-    padding:50px
-}
-
-.drinx {
-    display:inline-block;
-    margin-left: auto;
-    margin-right: auto;
-} */
 
 .drinx{
-    border: 1px;
+    border: 0;
+    margin:0;
+    padding:0;
     text-align: center;
 }
 
 .card {
     padding: 50px;
-    display:inline-block
+    display:inline-block;
 }
 
 .drink-img {
@@ -50,6 +67,64 @@ body {
     display:block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border:#302A32; ;
+    border-style: solid;
+    border-width: 3px;
+    cursor: pointer;
+}
+
+.drink-list {
+    margin-top: 0;
+    padding:0;
+}
+
+h4 {
+    color:white;
+    font-size: 13pt;
+    font-style: oblique;
+    background-color: #302A32;;
+    margin-top:0;
+    padding-bottom: 9px
+}
+
+.btn-like {
+    color:red;
+    font-size: 13pt;
+    font-style: normal;
+    position: absolute;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.card-info {
+    font-size: 13pt;
+    border:#0a205f;
+    border-style: solid;
+    border-width: 3px;
+    max-width: 500px;
+    margin-top:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: left;
+    background-color: white;
+    position:sticky;
+    bottom: 45%;
+    
+}
+
+footer {
+    margin: auto;
+}
+
+.exitBtn {
+    float:right;
+    margin:5px;
+}
+
+.search {
+    margin-left: 30px;
 }
