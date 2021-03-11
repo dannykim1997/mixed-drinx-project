@@ -93,9 +93,9 @@ const showCardInfo = function(drinks) {
   function setTextContent(ingredients, measurements) {
     if (ingredients === null) {
       return ""
-    } else {
-      return `${ingredients} - ${measurements}`
-    }
+    } else if (ingredients !== null & measurements == null){
+      return `${ingredients} - to taste`
+    } else {return `${ingredients} - ${measurements}`}
   }
 
 function changeBtnColor(btn) {
